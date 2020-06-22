@@ -1,0 +1,7 @@
+{
+  "name": "Food Suggeset",
+  "description": "API.AI webhook foodsuggest",
+  "repository": "https://github.com/nguyenoni/sugges-food",
+  "logo": "http://xvir.github.io/img/apiai.png",
+  "keywords": ["api.ai", "natural language"]
+}
