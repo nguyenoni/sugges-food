@@ -22,6 +22,10 @@ from flask import make_response
 # Flask app should start in global layout
 app = Flask(__name__)
 
+def get_page_content(url):
+   page = requests.get(url,headers={"Accept-Language":"en-US"})
+   return bs4.BeautifulSoup(page.text,"html.parser")
+
 @app.route('/', methods=['GET'])
 def hello():
     return 'Hello world1'
@@ -48,9 +52,7 @@ def webhook():
 
 
 
-def get_page_content(url):
-   page = requests.get(url,headers={"Accept-Language":"en-US"})
-   return bs4.BeautifulSoup(page.text,"html.parser")
+
 
 
 
@@ -143,12 +145,11 @@ def get_page_content(url):
 # }
     
     return {
-        "speech": speech,
-        "displayText": speech,
-        # "data": data,
+
+        "data": data,
         # "contextOut": [],
-        "data": {"facebook": facebook_message},
-        "source": "food-suggest"
+        # "data": {"facebook": facebook_message},
+        # "source": "food-suggest"
     }
 
 
