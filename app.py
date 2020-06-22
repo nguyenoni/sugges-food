@@ -142,14 +142,14 @@ def get_page_content(url):
 #         }
 # }
     
-#     return {
-#         "speech": speech,
-#         "displayText": speech,
-#         # "data": data,
-#         # "contextOut": [],
-#         "data": {"facebook": facebook_message},
-#         "source": "food-suggest"
-#     }
+    return {
+        "speech": speech,
+        "displayText": speech,
+        # "data": data,
+        # "contextOut": [],
+        "data": {"facebook": facebook_message},
+        "source": "food-suggest"
+    }
 
 
 if __name__ == '__main__':
